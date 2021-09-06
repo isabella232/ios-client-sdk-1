@@ -130,12 +130,14 @@ import BJNClientSDK
 ```
 ### Setup 
 
-[TBD] Explain services (perhaps add others we need here in the samples below, e.g. videoDeviceService)
-`meetingService` can be accessed as:
+As seen in the architecture diagram above, the BlueJeans iOS Client SDK is made up of "Services". These objects provide a static interface to the state of the SDK as well as methods to operate on it.
+
+You can retain referennces to these objects for your convenience. We'll start with the MeetingService and VideoDeviceService, which will let us join / leave a meeting and get at the video streams in it.
 
 **Swift:**
 ```swift
 let meetingService = BlueJeansSDK.meetingService
+let videoDeviceService = BlueJeansSDK.videoDeviceService
 ```
 
 ## Join a BlueJeans meeting :
@@ -223,7 +225,7 @@ loggingService.uploadLogs(comments: "Issue with the SDK", username: "abc@yourcom
     print("Log Upload Finished")
 }
 ```
-`BlueJeansSDK` uses `CocoaLumberjack` and should respect log levels set at the app level.
+`BlueJeansSDK` uses `CocoaLumberjack` and will respect log levels set at the app level.
 
 ## Meeting Service :
 This service takes care of all meeting-related APIs. Apart from meeting related APIs, the service also provides provides for several inMeeting services - ParticipantsService, AudioDeviceService, ContentShareService, PublicChatService, and PrivateChatService.
@@ -524,18 +526,50 @@ Sample app depicts the usage of both the RxSingle and ObeservableValue
 Unlike state observables, these wont carry a value that can accessed anytime. These are Fire and forget events which can mainly be used for notification banners and are generally provided in addition to the stateful variables and are to be used if necessary. These will be of type plain rx observable where u can use subscribeOn and ObserveOn from Rx library.
 
 
-## SDK Sample Application :
-We have bundled two sample apps in this repo. One for Java and another for kotlin.
-It showcases the integration of BlueJeans SDK for permission flow and joins the flow. They have got a basic UI functionality and orientation support.
+## SDK Sample Applications
+We have bundled two sample apps in this repo. 
 
-## Tracking & Analytics :
-BlueJeans collects data from app clients who integrate with SDK to join BlueJeans meetings like Device information (ID, OS, etc.), Location, and usage data.
+1. *Hello BlueJeans* provides a bare bones example to get you into a meeting and sending / receiving audio and video.
+2. *Screen Share*, as the name suggests, guides you through the process of setting up your app and an app extension to enable screen sharing.
 
-## Contributing :
-The BlueJeans Android Client SDK is closed source and proprietary. As a result, we cannot accept pull requests. However, we enthusiastically welcome feedback on how to make our SDK better. If you think you have found a bug, or have an improvement or feature request, please file a GitHub issue and we will get back to you. Thanks in advance for your help!
+## Important Notes
 
-## License : 
+### Background Modes
+If you need to support Audio after app moves to background, you need to enable ***Background Modes*** -> ***Audio*** capability.
+
+1. Open Xcode project settings
+2. Go to Capabilities tab(next to General tab)
+3. Scroll down to ***Background Modes*** section.
+4. Toggle the switch to ***ON*** position for *Background Modes*.
+5. Select checkbox with title ***Audio, AirPlay, and Picture in Picture***.
+
+![Selecting Audio in Background Modes](Images/backgroundmodes.png)
+
+***Note: Without this if you join a meeting -> background the app -> foreground it after sometime, the audio will be lost and it will show an error in console as:*** ```"Audio, Airplay and Picture in Picture" background mode missing from app capabilities.```
+
+### Video support in Background
+Note that the iOS Client SDK **does not support Video** in Background mode. App needs to be in foreground to use the Video capability. Once the app is backgrounded, video streaming will be stopped until user foregrounds the app.
+
+### iOS Simulators
+Video/Audio capability of `BlueJeansSDK`  would only work in an iOS Device since iOS Simulator cannot support Camera/Microphone. Hence you may not be able to use iOS Simulators for integrating and testing all SDK features. Features that do not rely on audio/video should work but are not officially supported. From 0.17 receiving remote video and audio should work properly.
+
+## Tracking & Analytics
+BlueJeans collects data from app clients who integrate with SDK to join BlueJeans meetings like device information (ID, OS, etc.), coarse location (based on IP address), and usage data.
+
+## Contributing
+The BlueJeans iOS Client SDK is closed source and proprietary. As a result, we cannot accept pull requests. However, we enthusiastically welcome feedback on how to make our SDK better. If you think you have found a bug, or have an improvement or feature request, please file a GitHub issue and we will get back to you. Thanks in advance for your help!
+
+## Dependencies
+
+Some of the external framework dependencies are:
+* CocoaLumberjack - tag: 3.7.0 - [Copyright (c) 2010-2016, Deusty, LLC](https://github.com/CocoaLumberjack/CocoaLumberjack/blob/master/LICENSE.txt) : BSD
+* Swinject - tag: 2.7.1 - [Copyright (c) 2015 Swinject Contributors](https://github.com/Swinject/Swinject/blob/2.1.0/LICENSE.txt) : MIT
+* SWXMLHash - tag: 4.2.3 - [Copyright (c) 2014 David Mohundro](https://github.com/drmohundro/SWXMLHash/blob/master/LICENSE) : MIT
+* facebook/SocketRocket - master - [Copyright (c) 2016-present, Facebook, Inc](https://github.com/facebook/SocketRocket/blob/master/LICENSE) : BSD
+* tonymillion/Reachability - master - [Copyright (c) 2011-2013, Tony Million](https://github.com/tonymillion/Reachability/blob/master/LICENCE.txt) : BSD-2
+
+## License
 Copyright © 2021 BlueJeans Network. All usage of the SDK is subject to the Developer Agreement that can be found [here](LICENSE). Download the agreement and send an email to api-sdk@bluejeans.com with a signed version of this agreement, before any commercial or public facing usage of this SDK.
 
-## Legal Requirements :
+## Legal Requirements
 Use of this SDK is subject to our [Terms & Conditions](https://www.bluejeans.com/terms-and-conditions-may-2020) and [Privacy Policy](https://www.bluejeans.com/privacy-policy). 
