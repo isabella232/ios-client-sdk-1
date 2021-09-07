@@ -1,0 +1,649 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNErrors.swift",
+      "line": 11,
+      "symbol": "LeaveMeetingError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNErrors.swift",
+      "line": 12,
+      "symbol": "LeaveMeetingError.notModerator",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNErrors.swift",
+      "line": 13,
+      "symbol": "LeaveMeetingError.noMeetingSession",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNObservables.swift",
+      "line": 14,
+      "symbol": "CallbackId",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 13,
+      "symbol": "CompletionBlock",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 30,
+      "symbol": "ConnectionState.waiting",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 123,
+      "symbol": "MeetingState.idle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 124,
+      "symbol": "MeetingState.validating",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 125,
+      "symbol": "MeetingState.connecting",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 126,
+      "symbol": "MeetingState.reconnecting",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 127,
+      "symbol": "MeetingState.connected",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 130,
+      "symbol": "MeetingJoinResult",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/BJNUtils.swift",
+      "line": 162,
+      "symbol": "MeetingJoinResult.other",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 10,
+      "symbol": "UnsubscribeClosure",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 11,
+      "symbol": "UnsubscribeTuple",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 13,
+      "symbol": "EventSubscriberProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 14,
+      "symbol": "EventSubscriberProtocol.unsubscribeCallbacks",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 17,
+      "symbol": "EventSubscriberProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 18,
+      "symbol": "EventSubscriberProtocol.onEvent(_:updater:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 25,
+      "symbol": "EventSubscriberProtocol.onEventOnce(_:updater:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 35,
+      "symbol": "EventSubscriberProtocol.onEvent(_:updater:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 42,
+      "symbol": "EventSubscriberProtocol.onEventOnce(_:updater:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 52,
+      "symbol": "EventSubscriberProtocol.unsubscribeAll()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 74,
+      "symbol": "EventSubscriber",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Helper/EventSubscriber.swift",
+      "line": 75,
+      "symbol": "EventSubscriber.unsubscribeCallbacks",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Meeting/BJNMeeting.swift",
+      "line": 11,
+      "symbol": "BJNMeeting",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Meeting/BJNMeeting.swift",
+      "line": 12,
+      "symbol": "BJNMeeting.meetingHost",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Meeting/BJNMeeting.swift",
+      "line": 13,
+      "symbol": "BJNMeeting.meetingTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Meeting/BJNMeeting.swift",
+      "line": 14,
+      "symbol": "BJNMeeting.meetingUri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 11,
+      "symbol": "ParticipantID",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 13,
+      "symbol": "BJNParticipant",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 14,
+      "symbol": "BJNParticipant.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 15,
+      "symbol": "BJNParticipant.isSelf",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 16,
+      "symbol": "BJNParticipant.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 17,
+      "symbol": "BJNParticipant.isAudioMuted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Participants/BJNParticipant.swift",
+      "line": 18,
+      "symbol": "BJNParticipant.isVideoMuted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/AudioDeviceService.swift",
+      "line": 16,
+      "symbol": "AudioDeviceService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 18,
+      "symbol": "BlueJeansSDK",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 48,
+      "symbol": "BlueJeansSDK.initialize(contentShareParameters:is5x5GalleryLayoutEnabled:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 53,
+      "symbol": "BlueJeansSDK.loggingService",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 57,
+      "symbol": "BlueJeansSDK.meetingService",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 61,
+      "symbol": "BlueJeansSDK.audioDeviceService",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 65,
+      "symbol": "BlueJeansSDK.videoDeviceService",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 69,
+      "symbol": "BlueJeansSDK.permissionService",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/BlueJeansSDK.swift",
+      "line": 73,
+      "symbol": "BlueJeansSDK.sdkVersion",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 18,
+      "symbol": "ContentShareMessageProvider",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 19,
+      "symbol": "ContentShareParametersProtocol",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 20,
+      "symbol": "ContentShareStopReason",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 21,
+      "symbol": "ContentShareAvailability",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 22,
+      "symbol": "ContentShareExtensionState",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 24,
+      "symbol": "BJNContentShareParameters",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 26,
+      "symbol": "BJNContentShareParameters.init(requireConfirmationBeforeHijacking:messageProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 31,
+      "symbol": "BJNContentShareParameters.requireConfirmationBeforeHijacking",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 32,
+      "symbol": "BJNContentShareParameters.messageProvider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 35,
+      "symbol": "ContentShareServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 36,
+      "symbol": "ContentShareServiceProtocol.contentShareAvailability",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 38,
+      "symbol": "ContentShareServiceProtocol.contentShareExtensionStatus",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 40,
+      "symbol": "ContentShareServiceProtocol.contentShareStopReason",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 42,
+      "symbol": "ContentShareServiceProtocol.confirmContentShare()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/ContentShareService.swift",
+      "line": 44,
+      "symbol": "ContentShareServiceProtocol.stopContentShare()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/LoggingService.swift",
+      "line": 15,
+      "symbol": "LogUploadCompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/LoggingService.swift",
+      "line": 17,
+      "symbol": "LoggingService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/LoggingService.swift",
+      "line": 117,
+      "symbol": "LogUploadResult",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/LoggingService.swift",
+      "line": 118,
+      "symbol": "LogUploadResult.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/LoggingService.swift",
+      "line": 119,
+      "symbol": "LogUploadResult.uploadInProgress",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/LoggingService.swift",
+      "line": 120,
+      "symbol": "LogUploadResult.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/MeetingService.swift",
+      "line": 17,
+      "symbol": "MeetingService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 15,
+      "symbol": "PermissionServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 97,
+      "symbol": "PermissionStatus",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 98,
+      "symbol": "PermissionStatus.notDetermined",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 99,
+      "symbol": "PermissionStatus.restricted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 100,
+      "symbol": "PermissionStatus.denied",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 101,
+      "symbol": "PermissionStatus.authorized",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 104,
+      "symbol": "Permission",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 105,
+      "symbol": "Permission.camera",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PermissionService.swift",
+      "line": 106,
+      "symbol": "Permission.microphone",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PrivateChatService.swift",
+      "line": 15,
+      "symbol": "PrivateChatServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PrivateChatService.swift",
+      "line": 144,
+      "symbol": "BJNPrivateChatMessage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PrivateChatService.swift",
+      "line": 145,
+      "symbol": "BJNPrivateChatMessage.sender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PrivateChatService.swift",
+      "line": 146,
+      "symbol": "BJNPrivateChatMessage.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 15,
+      "symbol": "PublicChatServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 90,
+      "symbol": "BJNChatMessage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 91,
+      "symbol": "BJNChatMessage.senderName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 92,
+      "symbol": "BJNChatMessage.messageText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 93,
+      "symbol": "BJNChatMessage.timestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 94,
+      "symbol": "BJNChatMessage.sentBySelf",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/PublicChatService.swift",
+      "line": 95,
+      "symbol": "BJNChatMessage.senderID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/VideoDeviceService.swift",
+      "line": 16,
+      "symbol": "VideoDeviceServiceProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/VideoDeviceService.swift",
+      "line": 60,
+      "symbol": "VideoDeviceServiceProtocol.setEnableSelfVideoPreview(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/VideoDeviceService.swift",
+      "line": 79,
+      "symbol": "VideoDeviceService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/Services/VideoDeviceService.swift",
+      "line": 225,
+      "symbol": "VideoDeviceService.setEnableSelfVideoPreview(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0/BJNVideo/BlueJeansSDK/UI/ZincViewModel.swift",
+      "line": 14,
+      "symbol": "ZincViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/bob/jenkins2/workspace/iOS_BJNVideoSDK_1.0.0"
+}

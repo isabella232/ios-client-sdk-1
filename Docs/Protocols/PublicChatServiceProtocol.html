@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PublicChatServiceProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/PublicChatServiceProtocol" class="dashAnchor"></a>
+
+    <a title="PublicChatServiceProtocol Protocol Reference"></a>
+
+    <header class="header">
+      <div>
+        <img src="../img/bjnlogo.png" style="height: 2.0em">
+      </div>
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlueJeans iOS SDK Documentation
+        </a>
+        
+      </p>
+    
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">iOS Video SDK</a>
+      <img class="carat" src="../img/carat.png" />
+      <span id="currentPage">PublicChatServiceProtocol Protocol Reference</span>
+      <script>
+        if (window.location.pathname.endsWith("index.html")) {
+          document.getElementById("currentPage").innerHTML = "About the SDK"
+          document.title = "BlueJeans IOS SDK"
+        }
+      </script>
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes%28Swift%29.html">Classes(Swift)</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BJNObservable.html">BJNObservable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BJNMutableObservable.html">BJNMutableObservable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CameraDevice.html">CameraDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ConnectionState.html">ConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LoggingMode.html">LoggingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoState.html">VideoState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoLayout.html">VideoLayout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioDeviceService.html">AudioDeviceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BlueJeansSDK.html">BlueJeansSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/EventSubscriber.html">EventSubscriber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LoggingService.html">LoggingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MeetingService.html">MeetingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/VideoDeviceService.html">VideoDeviceService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Classes.html#/s:12BJNClientSDK13ZincViewModelC">ZincViewModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LeaveMeetingError.html">LeaveMeetingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LogUploadResult.html">LogUploadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MeetingJoinResult.html">MeetingJoinResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MeetingState.html">MeetingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Permission.html">Permission</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PermissionStatus.html">PermissionStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ContentShareServiceProtocol.html">ContentShareServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/EventSubscriberProtocol.html">EventSubscriberProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PermissionServiceProtocol.html">PermissionServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PrivateChatServiceProtocol.html">PrivateChatServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PublicChatServiceProtocol.html">PublicChatServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/VideoDeviceServiceProtocol.html">VideoDeviceServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNChatMessage.html">BJNChatMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNContentShareParameters.html">BJNContentShareParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNMeeting.html">BJNMeeting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNParticipant.html">BJNParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNPrivateChatMessage.html">BJNPrivateChatMessage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK10CallbackIda">CallbackId</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK15CompletionBlocka">CompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK24ContentShareAvailabilitya">ContentShareAvailability</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK26ContentShareExtensionStatea">ContentShareExtensionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK27ContentShareMessageProvidera">ContentShareMessageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK30ContentShareParametersProtocola">ContentShareParametersProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK22ContentShareStopReasona">ContentShareStopReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK13ParticipantIDa">ParticipantID</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK18UnsubscribeClosurea">UnsubscribeClosure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK16UnsubscribeTuplea">UnsubscribeTuple</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>PublicChatServiceProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PublicChatServiceProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK25PublicChatServiceProtocolP02isD9AvailableAA13BJNObservableCySbSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/isChatAvailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK25PublicChatServiceProtocolP02isD9AvailableAA13BJNObservableCySbSgGvp">isChatAvailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Is true when the chat service is active, enabled for the meeting, and the network conditions allow chat to be sent and received.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isChatAvailable</span><span class="p">:</span> <span class="kt"><a href="../Classes/BJNObservable.html">BJNObservable</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="p">?</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK25PublicChatServiceProtocolP11chatHistoryAA13BJNObservableCySayAA14BJNChatMessageVGSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/chatHistory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK25PublicChatServiceProtocolP11chatHistoryAA13BJNObservableCySayAA14BJNChatMessageVGSgGvp">chatHistory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The chat history, newly joined users will only see the last 10 messages. May be cleared by a remote moderator endpoint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">chatHistory</span><span class="p">:</span> <span class="kt"><a href="../Classes/BJNObservable.html">BJNObservable</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Structs/BJNChatMessage.html">BJNChatMessage</a></span><span class="p">]?</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK25PublicChatServiceProtocolP19unreadMessagesCountAA13BJNObservableCySiSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/unreadMessagesCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK25PublicChatServiceProtocolP19unreadMessagesCountAA13BJNObservableCySiSgGvp">unreadMessagesCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of unread messages. Call <code>clearUnreadMessageCount()</code> to reset this.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">unreadMessagesCount</span><span class="p">:</span> <span class="kt"><a href="../Classes/BJNObservable.html">BJNObservable</a></span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">?</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK25PublicChatServiceProtocolP24clearUnreadMessagesCountyyF"></a>
+                    <a name="//apple_ref/swift/Method/clearUnreadMessagesCount()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK25PublicChatServiceProtocolP24clearUnreadMessagesCountyyF">clearUnreadMessagesCount()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clears the unread message count of all eligible participants Consumer application must call it when the user had viewed the unread chat messages to get the correct unread message count for future</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clearUnreadMessagesCount</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK25PublicChatServiceProtocolP11sendMessage7messageySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/sendMessage(message:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK25PublicChatServiceProtocolP11sendMessage7messageySS_tF">sendMessage(message:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a message in chat to all the participants</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2018 Copyright BlueJeans Network. All Rights Reserved.</p>
+    </section>
+  </body>
+</div>
+</html>
