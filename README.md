@@ -65,7 +65,7 @@ Integrate the SDK using the below guidelines and use SDK APIs to join a meeting 
 
 Steps:
 
-1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/ios-client-sdk-1.0.0.zip`
+1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.0.0/ios-client-sdk.zip`
 2. Unzip the file and copy the `Frameworks` folder to the root folder where Xcode project(*xxxx.xcodeproj* file) is located.
 3. Open the Xcode project, click on the project settings and select the *App target -> General Tab*.
 4. Scroll to ***Embedded Binaries*** section of Xcode target.
