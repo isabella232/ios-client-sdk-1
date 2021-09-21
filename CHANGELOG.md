@@ -1,7 +1,7 @@
 Change Log
 ==========
 
-Version 1.0.0 *TBD*
+Version 1.0.0 
 ---------------------------------
 Features:
 
@@ -21,5 +21,5 @@ Features:
 - Log Upload
 - Multi-stream support ("Sequin" Video Layouts)
 - Public and Private meeting Chat
-- Remote Video and Content mute
-- Meeting Information (Title, Hostname, Meeting Id, Participant passcode)
+- Remote Video mute
+- Meeting Information (Title, Hostname, Meeting Id)

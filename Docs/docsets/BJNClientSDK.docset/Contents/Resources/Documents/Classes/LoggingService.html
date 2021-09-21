@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -26,6 +29,11 @@
         
       </p>
     
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
     
     
     </header>
@@ -46,76 +54,61 @@
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Classes%28Swift%29.html">Classes(Swift)</a>
+            <a class="nav-group-name-link" href="../Documentation.html">Documentation</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BJNObservable.html">BJNObservable</a>
+                <a class="nav-group-task-link" href="../contentshareguide.html">ContentShareGuide</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BJNMutableObservable.html">BJNMutableObservable</a>
+                <a class="nav-group-task-link" href="../changelog.html">CHANGELOG</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../BlueJeansSDK.html">BlueJeansSDK</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/CameraDevice.html">CameraDevice</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/ConnectionState.html">ConnectionState</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/LoggingMode.html">LoggingMode</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/VideoState.html">VideoState</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/VideoLayout.html">VideoLayout</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/AudioDeviceService.html">AudioDeviceService</a>
-              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/BlueJeansSDK.html">BlueJeansSDK</a>
               </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/EventSubscriber.html">EventSubscriber</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/LoggingService.html">LoggingService</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MeetingService.html">MeetingService</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/VideoDeviceService.html">VideoDeviceService</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Classes.html#/s:12BJNClientSDK13ZincViewModelC">ZincViewModel</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Enums.html">Other Enumerations</a>
+            <a class="nav-group-name-link" href="../MeetingService.html">MeetingService</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/LeaveMeetingError.html">LeaveMeetingError</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/LogUploadResult.html">LogUploadResult</a>
+                <a class="nav-group-task-link" href="../Classes/MeetingService.html">MeetingService</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MeetingJoinResult.html">MeetingJoinResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoState.html">VideoState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoStateInactiveReason.html">VideoStateInactiveReason</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MeetingState.html">MeetingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoLayout.html">VideoLayout</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ConnectionState.html">ConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LeaveMeetingError.html">LeaveMeetingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNMeeting.html">BJNMeeting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../PermissionService.html">PermissionService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PermissionServiceProtocol.html">PermissionServiceProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/Permission.html">Permission</a>
@@ -126,83 +119,104 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Protocols.html">Other Protocols</a>
+            <a class="nav-group-name-link" href="../VideoDeviceService.html">VideoDeviceService</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/ContentShareServiceProtocol.html">ContentShareServiceProtocol</a>
+                <a class="nav-group-task-link" href="../Protocols/VideoDeviceServiceProtocol.html">VideoDeviceServiceProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/EventSubscriberProtocol.html">EventSubscriberProtocol</a>
+                <a class="nav-group-task-link" href="../Enums/CameraDevice.html">CameraDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../AudioDeviceService.html">AudioDeviceService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioDeviceService.html">AudioDeviceService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../LoggingService.html">LoggingService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LoggingService.html">LoggingService</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/PermissionServiceProtocol.html">PermissionServiceProtocol</a>
+                <a class="nav-group-task-link" href="../Enums/LoggingMode.html">LoggingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LogUploadResult.html">LogUploadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../LoggingService.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Chat.html">Chat</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PublicChatServiceProtocol.html">PublicChatServiceProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/PrivateChatServiceProtocol.html">PrivateChatServiceProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/PublicChatServiceProtocol.html">PublicChatServiceProtocol</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/VideoDeviceServiceProtocol.html">VideoDeviceServiceProtocol</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Structs.html">Other Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BJNChatMessage.html">BJNChatMessage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/BJNContentShareParameters.html">BJNContentShareParameters</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/BJNMeeting.html">BJNMeeting</a>
+                <a class="nav-group-task-link" href="../Structs/BJNPrivateChatMessage.html">BJNPrivateChatMessage</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/BJNParticipant.html">BJNParticipant</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/BJNPrivateChatMessage.html">BJNPrivateChatMessage</a>
+                <a class="nav-group-task-link" href="../Chat.html#/s:12BJNClientSDK13ParticipantIDa">ParticipantID</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Typealiases.html">Other Type Aliases</a>
+            <a class="nav-group-name-link" href="../ContentShareService.html">ContentShareService</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK10CallbackIda">CallbackId</a>
+                <a class="nav-group-task-link" href="../Protocols/ContentShareServiceProtocol.html">ContentShareServiceProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK15CompletionBlocka">CompletionBlock</a>
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK27ContentShareMessageProvidera">ContentShareMessageProvider</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK24ContentShareAvailabilitya">ContentShareAvailability</a>
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK30ContentShareParametersProtocola">ContentShareParametersProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK26ContentShareExtensionStatea">ContentShareExtensionState</a>
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK24ContentShareAvailabilitya">ContentShareAvailability</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK27ContentShareMessageProvidera">ContentShareMessageProvider</a>
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK26ContentShareExtensionStatea">ContentShareExtensionState</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK30ContentShareParametersProtocola">ContentShareParametersProtocol</a>
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK22ContentShareStopReasona">ContentShareStopReason</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK22ContentShareStopReasona">ContentShareStopReason</a>
+                <a class="nav-group-task-link" href="../Structs/BJNContentShareParameters.html">BJNContentShareParameters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Utility.html">Utility</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BJNObservable.html">BJNObservable</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a>
+                <a class="nav-group-task-link" href="../Classes/BJNMutableObservable.html">BJNMutableObservable</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK13ParticipantIDa">ParticipantID</a>
+                <a class="nav-group-task-link" href="../Utility.html#/s:12BJNClientSDK10CallbackIda">CallbackId</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK18UnsubscribeClosurea">UnsubscribeClosure</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Other%20Typealiases.html#/s:12BJNClientSDK16UnsubscribeTuplea">UnsubscribeTuple</a>
+                <a class="nav-group-task-link" href="../Utility.html#/s:12BJNClientSDK15CompletionBlocka">CompletionBlock</a>
               </li>
             </ul>
           </li>
@@ -219,7 +233,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The Logging Service can be used to set the log levels of the BlueJeansSDK, and to upload logs to BlueJeans for trouble shooting.</p>
 
           </div>
         </section>
@@ -248,7 +262,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadLogs</span><span class="p">(</span><span class="nv">comments</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">removeAfterUpload</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="n">onCompletion</span> <span class="nv">uploadLogCompletionHandler</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadLogs</span><span class="p">(</span><span class="nv">comments</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">removeAfterUpload</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="n">onCompletion</span> <span class="nv">uploadLogCompletionHandler</span><span class="p">:</span> <span class="kt"><a href="../LoggingService.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -323,7 +337,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>© 2018 Copyright BlueJeans Network. All Rights Reserved.</p>
+      <p>© 2021 Copyright BlueJeans Network. All Rights Reserved.</p>
     </section>
   </body>
 </div>
