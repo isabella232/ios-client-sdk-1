@@ -2,11 +2,11 @@ Welcome to the HelloBlueJeans sample application.
 
 To run a device you will need
 
-1 - Xcode 12.5
+1 - Xcode 12.5 or 13.0
 2 - A physical device (1), running iOS 13.0 or up. Setup for development with Xcode.
-3 - A copy of the latest XCFrameworks for the SDK, linked on Github. The Frameworks folder should be copied into the Samples directory.
+3 - A copy of the latest XCFrameworks for the SDK, linked on Github. The Frameworks folder should be copied into the Samples directory. Use the appropriate frameworks for the version of Xcode you are using.
 
-Then, click on the HelloBlueJeans project file, go to the HelloBlueJeans target, go to the signing & capabilities tab. Choose your developent team, and change the bundle identifier to something unique.
+Then, click on the HelloBlueJeans project file, go to the HelloBlueJeans target, go to the signing & capabilities tab. Choose your development team, and change the bundle identifier to something unique.
 
 Then navigate to the ViewController.swift file, to the method named *join* and add your own meeting ID and passcode.
 

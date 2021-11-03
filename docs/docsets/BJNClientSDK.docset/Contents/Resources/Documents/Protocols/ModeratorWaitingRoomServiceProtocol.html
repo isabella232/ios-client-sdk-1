@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ModeratorWaitingRoomServiceProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/ModeratorWaitingRoomServiceProtocol" class="dashAnchor"></a>
+
+    <a title="ModeratorWaitingRoomServiceProtocol Protocol Reference"></a>
+
+    <header class="header">
+      <div>
+        <img src="../img/bjnlogo.png" style="height: 2.0em">
+      </div>
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlueJeans iOS SDK Documentation
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">iOS Video SDK</a>
+      <img class="carat" src="../img/carat.png" />
+      <span id="currentPage">ModeratorWaitingRoomServiceProtocol Protocol Reference</span>
+      <script>
+        if (window.location.pathname.endsWith("index.html")) {
+          document.getElementById("currentPage").innerHTML = "About the SDK"
+          document.title = "BlueJeans IOS SDK"
+        }
+      </script>
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../contentshareguide.html">ContentShareGuide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../changelog.html">CHANGELOG</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BlueJeansSDK.html">BlueJeansSDK</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BlueJeansSDK.html">BlueJeansSDK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../MeetingService.html">MeetingService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MeetingServiceProtocol.html">MeetingServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MeetingJoinResult.html">MeetingJoinResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoState.html">VideoState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoStateInactiveReason.html">VideoStateInactiveReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MeetingState.html">MeetingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VideoLayout.html">VideoLayout</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LeaveMeetingError.html">LeaveMeetingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MeetingInformation.html">MeetingInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/WaitingRoomEvent.html">WaitingRoomEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../PermissionService.html">PermissionService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PermissionServiceProtocol.html">PermissionServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Permission.html">Permission</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PermissionStatus.html">PermissionStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../VideoDeviceService.html">VideoDeviceService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/VideoDeviceServiceProtocol.html">VideoDeviceServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CameraDevice.html">CameraDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../AudioDeviceService.html">AudioDeviceService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioDeviceServiceProtocol.html">AudioDeviceServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../LoggingService.html">LoggingService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LoggingServiceProtocol.html">LoggingServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LoggingMode.html">LoggingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LogUploadResult.html">LogUploadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../LoggingService.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Chat.html">Chat</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PublicChatServiceProtocol.html">PublicChatServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PrivateChatServiceProtocol.html">PrivateChatServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNChatMessage.html">BJNChatMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNPrivateChatMessage.html">BJNPrivateChatMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNParticipant.html">BJNParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Chat.html#/s:12BJNClientSDK13ParticipantIDa">ParticipantID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ContentShareService.html">ContentShareService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ContentShareServiceProtocol.html">ContentShareServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK27ContentShareMessageProvidera">ContentShareMessageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK30ContentShareParametersProtocola">ContentShareParametersProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK24ContentShareAvailabilitya">ContentShareAvailability</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK26ContentShareExtensionStatea">ContentShareExtensionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../ContentShareService.html#/s:12BJNClientSDK22ContentShareStopReasona">ContentShareStopReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNContentShareParameters.html">BJNContentShareParameters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ModeratorWaitingRoomService.html">ModeratorWaitingRoomService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ModeratorWaitingRoomServiceProtocol.html">ModeratorWaitingRoomServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/WaitingRoomParticipant.html">WaitingRoomParticipant</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ModeratorControlsService.html">ModeratorControlsService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ModeratorControlsServiceProtocol.html">ModeratorControlsServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RecordingState.html">RecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RecordingSuccess.html">RecordingSuccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RecordingError.html">RecordingError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ClosedCaptioningService.html">ClosedCaptioningService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ClosedCaptioningServiceProtocol.html">ClosedCaptioningServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Utility.html">Utility</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BJNObservable.html">BJNObservable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BJNMutableObservable.html">BJNMutableObservable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Utility.html#/s:12BJNClientSDK10CallbackIda">CallbackId</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Utility.html#/s:12BJNClientSDK15CompletionBlocka">CompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>ModeratorWaitingRoomServiceProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ModeratorWaitingRoomServiceProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>The service used to moderate the waiting room, for example to deny a participant from joining the meeting, admit a participant into the meeting, or demote a participant back into the waiting room from the meeting.
+Waiting room moderation is only available to participants who have joined as a moderator, and in meetings scheduled with waiting room enabled. Check the <code>isWaitingRoomCapable</code> property is <code>true</code> before exposing this functionality to the user.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP8admitAllyyF"></a>
+                    <a name="//apple_ref/swift/Method/admitAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP8admitAllyyF">admitAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Admit all of the participants in the waiting room into the meeting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">admitAll</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP5admit11participantyAA0dE11ParticipantV_tF"></a>
+                    <a name="//apple_ref/swift/Method/admit(participant:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP5admit11participantyAA0dE11ParticipantV_tF">admit(participant:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Admit a participant into the meeting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">admit</span><span class="p">(</span><span class="nv">participant</span><span class="p">:</span> <span class="kt"><a href="../Structs/WaitingRoomParticipant.html">WaitingRoomParticipant</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP7denyAllyyF"></a>
+                    <a name="//apple_ref/swift/Method/denyAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP7denyAllyyF">denyAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deny all of the participants in the waiting room, this will remove them from the waiting room.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">denyAll</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP4deny11participantyAA0dE11ParticipantV_tF"></a>
+                    <a name="//apple_ref/swift/Method/deny(participant:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP4deny11participantyAA0dE11ParticipantV_tF">deny(participant:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deny a single participant from the waiting room.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deny</span><span class="p">(</span><span class="nv">participant</span><span class="p">:</span> <span class="kt"><a href="../Structs/WaitingRoomParticipant.html">WaitingRoomParticipant</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP6demote11participantyAA14BJNParticipantV_tF"></a>
+                    <a name="//apple_ref/swift/Method/demote(participant:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP6demote11participantyAA14BJNParticipantV_tF">demote(participant:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Demote a participant from the meeting back into the waiting room.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">demote</span><span class="p">(</span><span class="nv">participant</span><span class="p">:</span> <span class="kt"><a href="../Structs/BJNParticipant.html">BJNParticipant</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP02isdE7CapableAA13BJNObservableCySbSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/isWaitingRoomCapable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP02isdE7CapableAA13BJNObservableCySbSgGvp">isWaitingRoomCapable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if this meeting supports waiting room.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isWaitingRoomCapable</span><span class="p">:</span> <span class="kt"><a href="../Classes/BJNObservable.html">BJNObservable</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="p">?</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP02isdE7EnabledAA13BJNObservableCySbSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/isWaitingRoomEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP02isdE7EnabledAA13BJNObservableCySbSgGvp">isWaitingRoomEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, the waiting room is enabled and anyone who joins with a participant passcode will be placed into the waiting room until the are admitted or denied by a moderator.
+If  <code>false</code> then participants will join the meeting automatically without joining the waiting room first.
+The default value can be set when the meeting is scheduled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isWaitingRoomEnabled</span><span class="p">:</span> <span class="kt"><a href="../Classes/BJNObservable.html">BJNObservable</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="p">?</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP03setdE7EnabledyySbF"></a>
+                    <a name="//apple_ref/swift/Method/setWaitingRoomEnabled(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP03setdE7EnabledyySbF">setWaitingRoomEnabled(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Can be used to set the enablement of waiting room.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setWaitingRoomEnabled</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP07waitingE12ParticipantsAA13BJNObservableCySayAA0dE11ParticipantVGSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/waitingRoomParticipants" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK35ModeratorWaitingRoomServiceProtocolP07waitingE12ParticipantsAA13BJNObservableCySayAA0dE11ParticipantVGSgGvp">waitingRoomParticipants</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of participants in the waiting room, will fire a change event when a participant joins or leaves the waiting room.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">waitingRoomParticipants</span><span class="p">:</span> <span class="kt"><a href="../Classes/BJNObservable.html">BJNObservable</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Structs/WaitingRoomParticipant.html">WaitingRoomParticipant</a></span><span class="p">]?</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2021 Copyright BlueJeans Network. All Rights Reserved.</p>
+    </section>
+  </body>
+</div>
+</html>

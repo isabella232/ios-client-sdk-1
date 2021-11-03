@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CHANGELOG  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="CHANGELOG  Reference"></a>
+
+    <header class="header">
+      <div>
+        <img src="img/bjnlogo.png" style="height: 2.0em">
+      </div>
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          BlueJeans iOS SDK Documentation
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">iOS Video SDK</a>
+      <img class="carat" src="img/carat.png" />
+      <span id="currentPage">CHANGELOG  Reference</span>
+      <script>
+        if (window.location.pathname.endsWith("index.html")) {
+          document.getElementById("currentPage").innerHTML = "About the SDK"
+          document.title = "BlueJeans IOS SDK"
+        }
+      </script>
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="contentshareguide.html">ContentShareGuide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="changelog.html">CHANGELOG</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="BlueJeansSDK.html">BlueJeansSDK</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BlueJeansSDK.html">BlueJeansSDK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="MeetingService.html">MeetingService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MeetingServiceProtocol.html">MeetingServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MeetingJoinResult.html">MeetingJoinResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VideoState.html">VideoState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VideoStateInactiveReason.html">VideoStateInactiveReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MeetingState.html">MeetingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VideoLayout.html">VideoLayout</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LeaveMeetingError.html">LeaveMeetingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/MeetingInformation.html">MeetingInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WaitingRoomEvent.html">WaitingRoomEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="PermissionService.html">PermissionService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PermissionServiceProtocol.html">PermissionServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Permission.html">Permission</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PermissionStatus.html">PermissionStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="VideoDeviceService.html">VideoDeviceService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/VideoDeviceServiceProtocol.html">VideoDeviceServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CameraDevice.html">CameraDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="AudioDeviceService.html">AudioDeviceService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AudioDeviceServiceProtocol.html">AudioDeviceServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="LoggingService.html">LoggingService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/LoggingServiceProtocol.html">LoggingServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LoggingMode.html">LoggingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LogUploadResult.html">LogUploadResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="LoggingService.html#/s:12BJNClientSDK26LogUploadCompletionHandlera">LogUploadCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Chat.html">Chat</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PublicChatServiceProtocol.html">PublicChatServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PrivateChatServiceProtocol.html">PrivateChatServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/BJNChatMessage.html">BJNChatMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/BJNPrivateChatMessage.html">BJNPrivateChatMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/BJNParticipant.html">BJNParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Chat.html#/s:12BJNClientSDK13ParticipantIDa">ParticipantID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="ContentShareService.html">ContentShareService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ContentShareServiceProtocol.html">ContentShareServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="ContentShareService.html#/s:12BJNClientSDK27ContentShareMessageProvidera">ContentShareMessageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="ContentShareService.html#/s:12BJNClientSDK30ContentShareParametersProtocola">ContentShareParametersProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="ContentShareService.html#/s:12BJNClientSDK24ContentShareAvailabilitya">ContentShareAvailability</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="ContentShareService.html#/s:12BJNClientSDK26ContentShareExtensionStatea">ContentShareExtensionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="ContentShareService.html#/s:12BJNClientSDK22ContentShareStopReasona">ContentShareStopReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/BJNContentShareParameters.html">BJNContentShareParameters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="ModeratorWaitingRoomService.html">ModeratorWaitingRoomService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ModeratorWaitingRoomServiceProtocol.html">ModeratorWaitingRoomServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/WaitingRoomParticipant.html">WaitingRoomParticipant</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="ModeratorControlsService.html">ModeratorControlsService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ModeratorControlsServiceProtocol.html">ModeratorControlsServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RecordingState.html">RecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RecordingSuccess.html">RecordingSuccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RecordingError.html">RecordingError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="ClosedCaptioningService.html">ClosedCaptioningService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ClosedCaptioningServiceProtocol.html">ClosedCaptioningServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Utility.html">Utility</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BJNObservable.html">BJNObservable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BJNMutableObservable.html">BJNMutableObservable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Utility.html#/s:12BJNClientSDK10CallbackIda">CallbackId</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Utility.html#/s:12BJNClientSDK15CompletionBlocka">CompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='change-log' class='heading'>Change Log</h1>
+<h2 id='version-1-1-0' class='heading'>Version 1.1.0</h2>
+
+<hr>
+<h3 id='strong-em-breaking-changes-em-strong' class='heading'><strong><em>Breaking Changes</em></strong></h3>
+<h4 id='renamed' class='heading'>Renamed</h4>
+
+<ul>
+<li>MeetingService -&gt; MeetingServiceProtocol</li>
+<li>LoggingService -&gt; LoggingServiceProtocol</li>
+<li>VideoDeviceService -&gt; VideoDeviceServiceProtocol</li>
+<li>AudioDeviceService -&gt; AudioDeviceServiceProtocol</li>
+<li>meetingService.leaveAndEndMeeting(kickoutDelayInSeconds: Int) -&gt; meetingService.moderatorControlsService.endMeetingForAllParticipants(timeInSeconds: Int)]</li>
+<li>BJNMeeting -&gt; MeetingInformation, meetingService.meetingInfo -&gt; meetingService.meetingInformation</li>
+</ul>
+<h4 id='removed' class='heading'>Removed</h4>
+
+<ul>
+<li>ConnectionState (Use MeetingState instead)</li>
+<li>maxVideoBandwith removed from meetingService.join(&hellip;), can still be set as meetingService.maxVideoBandwith = &hellip; before joining.</li>
+</ul>
+<h3 id='feature-additions' class='heading'>Feature Additions</h3>
+
+<ul>
+<li>ModeratorControlsService
+
+<ul>
+<li>Check if the client has moderator privileges</li>
+<li>Start and stop recording</li>
+<li>Mute the audio or video of one, or all participants</li>
+<li>Drop a participant from the meeting</li>
+<li>isModerator flag added to BJNParticipant</li>
+</ul></li>
+<li>Waiting Room Support
+
+<ul>
+<li>Join a waiting room enabled meeting</li>
+<li>Added <code>.waitingRoom</code> to MeetingState</li>
+<li>Events for approval, denial, meeting ended and demotion to waiting room.</li>
+</ul></li>
+<li>Waiting Room Moderation Support
+
+<ul>
+<li>View participants in the waiting room</li>
+<li>Enable/disable waiting room</li>
+<li>Check if a meeting supports waiting room</li>
+<li>Admit or deny one or all participants in the WR</li>
+<li>Demote a participant back to the WR</li>
+</ul></li>
+<li>Closed Caption Support
+
+<ul>
+<li>Check if the meeting supports Closed Captioning</li>
+<li>Enable/disable closed captioning for the client</li>
+<li>Observe the closed caption text</li>
+</ul></li>
+<li>Debugging Improvements
+
+<ul>
+<li>enableAudioCaptureDump(_ enable: Bool)</li>
+</ul></li>
+<li>Remote Stream Enablement
+
+<ul>
+<li>Mute the remote video stream</li>
+<li>Mute the remote content stream</li>
+</ul></li>
+<li>Meeting Information
+
+<ul>
+<li>Meeting ID added</li>
+<li>Participant passcode added</li>
+<li>Meeting owner username added</li>
+</ul></li>
+<li>PrivateChatService
+
+<ul>
+<li>isPrivateChatAvailable flag added - private chat can be disabled in some meetings.</li>
+</ul></li>
+</ul>
+<h2 id='version-1-0-0' class='heading'>Version 1.0.0 </h2>
+
+<p>Features:</p>
+
+<ul>
+<li>Audio and Video Permission handling</li>
+<li>Join, End Meeting</li>
+<li>Self Video</li>
+<li>Remote Video, Remote Video states</li>
+<li>Content receive</li>
+<li>Audio and Video self mute</li>
+<li>Orientation handling</li>
+<li>Toggle front / back camera</li>
+<li>Video Layout switch</li>
+<li>Participant list</li>
+<li>Participant properties: Audio mute state, Video mute state, is Self, Name and Unique Identifier</li>
+<li>Self Participant</li>
+<li>Screen Share</li>
+<li>Log Upload</li>
+<li>Multi-stream support (&ldquo;Sequin&rdquo; Video Layouts)</li>
+<li>Public and Private meeting Chat</li>
+<li>Remote Video mute</li>
+<li>Meeting Information (Title, Hostname, Meeting Id)</li>
+</ul>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2021 Copyright BlueJeans Network. All Rights Reserved.</p>
+    </section>
+  </body>
+</div>
+</html>

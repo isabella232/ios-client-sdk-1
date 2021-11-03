@@ -11,7 +11,7 @@ import BJNClientSDK
 class ViewController: UIViewController {
     
     // Services
-    var meetingService: MeetingService!
+    var meetingService: MeetingServiceProtocol!
     var videoDeviceService: VideoDeviceServiceProtocol!
         
     // Outlets
@@ -69,10 +69,15 @@ class ViewController: UIViewController {
     }
     
     func setupMeetingUI() {
-        // Here we set the initial value of our UI based on the meetingState.
+        // Here we set the initial value of our UI based on the meetingState and meetingInformation.
         self.setMeetingUI()
         // Here we use the onChange handler, to pass a closure that will be run every time the meetingState changes thereafter. We can use this to reactively update the UI based on the state of the meeting.
         meetingService.meetingState.onChange { [ weak self ] in
+            self?.setMeetingUI()
+        }
+        
+        // Because the UI is also dependent on the meetingInformation, it should be updated when this changes as well.
+        meetingService.meetingInformation.onChange { [ weak self ] in
             self?.setMeetingUI()
         }
     }
@@ -80,7 +85,7 @@ class ViewController: UIViewController {
     // This method sets the title text, and enablement of the buttons based on the meetingState.
     func setMeetingUI() {
         let meetingState = meetingService.meetingState.value
-        let meetingTitle = meetingService.meetingInfo.value?.meetingTitle // Meeting info is an optional property because we do not have this information until we reach the connecting state.
+        let meetingTitle = meetingService.meetingInformation.value?.meetingTitle // Meeting info is an optional property because we do not have this information until we reach the connecting or waiting room state.
         
         // The onChange closures may not be always called from the main thread, therefore if we want to modify the UI we must call this from the main thread explicitly.
         DispatchQueue.main.async {
@@ -93,6 +98,13 @@ class ViewController: UIViewController {
             case .validating:
                 self.joinButton.isEnabled = false
                 title = "Validating"
+            case .waitingRoom:
+                self.leaveButton.isEnabled = true
+                if let meetingTitle = meetingTitle {
+                    title = "Waiting Room for \(meetingTitle )"
+                } else {
+                    title = "Waiting Room"
+                }
             case .connecting:
                 self.leaveButton.isEnabled = true
                 if let meetingTitle = meetingTitle {
