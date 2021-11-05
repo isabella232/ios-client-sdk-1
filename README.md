@@ -28,26 +28,34 @@ The design of the SDK emphasizes **simplicity**. Developers can quickly integrat
 - Remote Video and Content mute
 - Meeting Information (Title, Hostname, Meeting ID)
 
-## Current Version: 1.0.0
+### New Features (new in 1.1.0) See CHANGELOG.md for more details.
+- Closed Captioning Support
+- Waiting Room Participant Support
+- Waiting Room Moderation Support
+- Moderator Controls
+- Mute remote content and video streams
+- Xcode 13.0 Support
+
+## Current Version: 1.1.0
 
 ## Pre-requisites
 
-This framework requires ***Swift 5.4*** and ***Xcode 12.5***. Module stability will be provided in a future release.
+This framework requires ***Swift 5.4 or Swift 5.5*** and ***Xcode 12.5 or 13.0***. Module stability will be provided in a future release.
 
 Target deployment requires a minimum of *iOS version 13.0*.
 
-There are additional software dependencies on frameworks as mentioned in the [**Dependencies**](#dependencies) section. All dependent frameworks are included as part of the frameworks bundle.
+All dependent frameworks are included as part of the *Frameworks* folder. Use the appropriate frameworks depending on your Xcode version. 
 
 ## API Architecture
 
-![iOS Client SDK API Structure](https://user-images.githubusercontent.com/23289872/131215117-4629fab3-35ec-47a1-891c-517623b4e7b5.png)
+![iOS Client SDK API Structure](Images/ios-sdk-api-structure.png)
 
 ## SDK Documentation
 
-Detailed documentation of SDK functions is available [here](Docs/index.html).
+Detailed documentation of SDK functions is available [here](https://bluejeans.github.io/ios-client-sdk/).
 
 ## How do I start?
-
+   
 You can experience BlueJeans meetings using the iOS client SDK by following the two steps below:
 
 ### Generate a meeting ID
@@ -55,7 +63,8 @@ You can experience BlueJeans meetings using the iOS client SDK by following the 
 As a prerequisite to using the BlueJeans iOS Client SDK to join meetings, you need a BlueJeans meeting ID. If you do not have a meeting ID then you can create one using a BlueJeans account:
 
 - Sign up for a BlueJeans Account either by opting in for a [trial](https://www.bluejeans.com/free-video-conferencing-trial) or a [paid account](https://store.bluejeans.com/)
-- Once the account is created, you can schedule a meeting either by using the account or through the [direct API](https://bluejeans.github.io/api-rest-howto/schedule.html) calls. In order to enable API calls on your account, please reach out to [support team](https://support.bluejeans.com/s/contactsupport).
+- Once the account is created, you can schedule a meeting either by using the account or through the [direct API](https://bluejeans.github.io/api-rest-howto/schedule.html) calls. To enable API calls on your account, please reach out to [support team](https://support.bluejeans.com/s/contactsupport).
+- Some features (such as closed captioning) are not available in every meeting. Their availability depends on the account of the meeting owner, and the enterprise they belong to. The SDK provides methods to check if these features are available (e.g. `closedCaptioningService.isClosedCaptioningAvailable`). To enable a feature that is not available on your account, please contact your enterprise admin and get the feature enabled through the [BlueJeans support team](https://support.bluejeans.com/s/contactsupport).
 
 ### Integrate BlueJeans iOS Client SDK
 
@@ -65,12 +74,12 @@ Integrate the SDK using the below guidelines and use SDK APIs to join a meeting 
 
 Steps:
 
-1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.0.0/ios-client-sdk.zip`
-2. Unzip the file and copy the `Frameworks` folder to the root folder where Xcode project(*xxxx.xcodeproj* file) is located.
+1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.1.0/ios-client-sdk-xcode12.zip` or `https://swdl.bluejeans.com/bjnvideosdk/ios/1.1.0/ios-client-sdk-xcode13.zip` depending on whether you are using Xcode 12.5 or 13.0.
+2. Unzip the file and copy the `Frameworks` folder to the root folder where the Xcode project(*xxxx.xcodeproj* file) is located.
 3. Open the Xcode project, click on the project settings and select the *App target -> General Tab*.
 4. Scroll to ***Embedded Binaries*** section of Xcode target.
 5. Select all frameworks found in `Frameworks`
-6. Drag and drop all frameworks present in `Frameworks` folder to this section. Make sure the project settings looks like below image after adding it. Note that `BJNiOSBroadcastExtension.xcframework` is only needed if you intend to support screen sharing.
+6. Drag and drop all frameworks present in the `Frameworks` folder to this section. Make sure the project settings look like the below image after adding it. Note that `BJNiOSBroadcastExtension.xcframework` is only needed if you intend to support screen sharing.
 
 ![Xcode Project Build Setting - General Tab](Images/xcodegeneralsettings.png)
 
@@ -78,15 +87,23 @@ Steps:
 
 If you follow the integration steps above you will notice that you can not run your app on the iOS Simulator. The SDK does support using the simulator for debugging but there are some extra steps to get it working.
 
-1. Remove the BlueJeansSDK.xcframework from the Frameworks, Libraries and Embedded Content section.
-2. Now the project will run on the simulator, but won't load on a real device.
-3. To fix this we can add a *Run Script Phase* to the *Build Phases* for our xcode-project, which will run the included script. 
+The following frameworks are not built with support for the simulator.
+
+- VZXRCVCommon.xcframework/ios-arm64/VZXRCVCommon.framework
+- VZXRCVFeatureVirtualBackgrounds.xcframework/ios-arm64/VZXRCVFeatureVirtualBackgrounds.framework
+- VZXRCVVideoEffects.xcframework/ios-arm64/VZXRCVVideoEffects.framework
+ 
+ To work around this, follow these steps.
+
+1. Remove each of the above .xcframework's from the Frameworks, Libraries, and Embedded Content section.
+2. Now the project will run on the simulator, but won't work on a real device.
+3. To fix this we can add a *Run Script Phase* to the *Build Phases* for our Xcode project, which will run the included script. This script will copy and code-sign the framework only on real devices.
 
 ![Xcode Project Build Setting - General Tab](Images/embed-device-only.png)
 
 ### SPM, Carthage and Cocoapods
 
-Other dependency managers, such as the Swift package manager, Carthage or Cocoapods are not currently supported.
+Other dependency managers, such as the Swift package manager, Carthage, or Cocoapods are not currently supported.
 
 ### Upgrade Instructions
 
@@ -110,7 +127,7 @@ In iOS, the user must explicitly grant the app permission to access device camer
 
 Permissions can be requested using the `BlueJeansSDK.permissionService` or otherwise will be requested on joining a meeting. By default, the SDK requires both audio and video permissions to be granted or we can not join the meeting. The minimum permissions can also be changed in the `PermissionService`.
 
-See also [Apple's developer documentation on  audio and video capture permissions.](https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios)
+See also [Apple's developer documentation on audio and video capture permissions.](https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios)
 
 Open your application's `Info.plist` and provide a short explanation for both of these `Info.plist` keys:
 
@@ -126,11 +143,11 @@ iOS displays this prompt when asking the user for permission, and thereafter in 
 The work needed to add the BlueJeans functionality into your application code is outlined here. Briefly, you will do these steps:
 
 - Include the BlueJeans `BJNClientSDK` module, and initialize the SDK by calling the `BlueJeansSDK.initalize` method.
-- Create a video view for the *Self view*, add and position the remote video view controller, and if desired *Content Share view*.
+- Create a video view for the *Self-view*, add and position the remote video view controller, and if desired *Content Share view*.
 - Make the API call to Join the BlueJeans Meeting.
 - When finished, make the API call to Leave the BlueJeans Meeting.
 
-*There!* That is the extent of the work you need to do to make your application join its first BlueJeans meeting.
+*There!* That is the extent of the work you need to do to make your application join a BlueJeans meeting.
 
 ### Include Module
 
@@ -156,9 +173,9 @@ To connect to a Video/Audio meeting,
 ```swift
 meetingService.join(meetingID: "your-meeting-id", passcode: "your-passcode", displayName: "John Doe") { joinResult in
  if joinResult == .success {
-  print("Join meeting: Success")
+ print("Join meeting: Success")
  } else {
-  print("Join meeting failed with result \(joinResult)")
+ print("Join meeting failed with result \(joinResult)")
  }
 }
 ```
@@ -196,8 +213,8 @@ remoteVideoViewController.didMove(toParent: self)
 
 The Self and Content Share views can be added as follows:
 
-1. Create a container view (e.g. `videoContainer`) in Storyboard, XIB or code.
-2. Setup AutoLayout constraints for `videoContainer` view.
+1. Create a container view (e.g. `videoContainer`) in Storyboard, XIB, or code.
+2. Setup AutoLayout constraints for the `videoContainer` view.
 3. Add the self or content share view as described below.
 
 ```swift
@@ -218,16 +235,16 @@ Similar code can be used with `getContentShareInstance` in place of `getSelfView
 
 ### Self Video View Rotation
 
-Note that the size/aspect ratio of the self-view can change as the device is rotated. Currently, this is between 3:4 (portrait) and 4:3 (landscape), but is likely to also include 9:16 and 16:9 in future releases.
+Note that the size/aspect ratio of the self-view will change as the device is rotated. Currently, this is between 3:4 (portrait) and 4:3 (landscape) but is likely to also include 9:16 and 16:9 in future releases.
 
-To handle these changes (and many other properties), the SDK provides *observable properties* that allow you to react whenever they change. In this case you need to observe the *VideoDeviceService.selfViewSize*  property as follows:
+To handle these changes (and many other properties), the SDK provides *observable properties* that allow you to react whenever they change. In this case, you need to observe the *VideoDeviceService.selfViewSize* property as follows:
 
 **Swift:**
 
 ```swift
 videoDeviceService.selfViewSize.onChange {
-    print("Self view size changed to ", videoDeviceService.selfViewSize.value)
-    // Update self view container size
+  print("Self view size changed to ", videoDeviceService.selfViewSize.value)
+  // Update self view container size
 }
 ```
 
@@ -243,7 +260,7 @@ The iOS Client SDK will record logs. If you have experienced an issue you can up
 let loggingService = BlueJeansSDK.loggingService // This will instantiate the logger, do this early in the lifecycle of your application.
 
 loggingService.uploadLogs(comments: "Issue with the SDK", username: "abc@yourcompany.com") { uploadResult in
-    print("Log Upload Finished")
+  print("Log Upload Finished")
 }
 ```
 
@@ -269,7 +286,7 @@ Represents how remote participants videos are composed:
 - **People** : The most recent speaker is shown as a larger video. A filmstrip of the next (up to) 5 most recent speakers is also seen.
 - **Gallery** : A collection of the most recent speakers is shown, arranged in a grid layout of equal sizes.
 
-*videoLayout* reflects for the current video layout, while *setVideoLayout(to layout: VideoLayout)* can be used to set a layout of your choice.
+*videoLayout* reflects the current video layout, while *setVideoLayout(to layout: VideoLayout)* can be used to set a layout of your choice.
 
 Note that by default layout will be set by the meeting scheduler in their account's meeting settings.
 
@@ -297,7 +314,7 @@ The SDK provides a facility to chat within the meeting with participants present
 
 As the names suggest, the Public and Private chat services provide access to send and receive messages either directly to an individual or to share with all participants in the meeting.
 
-## Logging Service
+## LoggingService
 
 This has already been briefly covered above. The desired logging level can be set and logs can be uploaded to BlueJeans.
 
@@ -306,6 +323,24 @@ This has already been briefly covered above. The desired logging level can be se
 By default, the SDK will ask for microphone/camera permission at the last possible moment - when joining a meeting for the first time. It will use the strings specified in your app's Info.plist when requesting permission (see above).
 
 The PermissionService provides methods and states to allow more fine-grained control over how and when permission is asked for.
+
+## ModeratorControlsService
+
+When you join a BlueJeans meeting with a moderator passcode, various extra controls are available. For example, to mute the other participants in the meeting, or to start or stop recording. 
+
+The ModeratorControlsService provides the ability to check if an SDK user has joined with moderator privileges, and functions to perform moderator-specific actions. 
+
+## ModeratorWaitingRoomService
+
+BlueJeans meetings can optionally include the "Waiting Room" feature, which allows users who join with a participant passcode to first be placed into a waiting room state, from here a moderator can individually admit them into the meeting - after which they will join automatically. 
+
+The ModeratorWaitingRoomService provides functions and properties to see who has joined the waiting room, admit or deny those in the waiting room, or demote someone from the meeting back into the waiting room. It also provides functions to toggle the waiting room function on or off in a meeting and check if the meeting supports the 'Waiting Room' feature. 
+
+## ClosedCaptioningService
+
+The BlueJeans meeting platform supports automatically generated closed captioning for meetings. 
+
+The ClosedCaptioningService provides functions and properties to check if automatic captions are available for the current meeting, to start and stop the captions on the client, and the captions themselves. 
 
 ## SDK Sample Applications
 
@@ -336,7 +371,7 @@ Note that the iOS Client SDK **does not support Video** in Background mode. An a
 
 ### iOS Simulators
 
-Video/Audio capability of `BlueJeansSDK`  would only work in an iOS Device since iOS Simulator cannot support Camera/Microphone. Hence you may not be able to use iOS Simulators for integrating and testing all SDK features. Features that do not rely on audio/video should work but are not officially supported. From 0.17 receiving remote video and audio should work properly.
+Video/Audio capability of `BlueJeansSDK` would only work in an iOS Device since iOS Simulator cannot support Camera/Microphone. Hence you may not be able to use iOS Simulators for integrating and testing all SDK features. Features that do not rely on audio/video should work but are not officially supported. 
 
 ### Video Resolutions and BW consumption
 
@@ -356,7 +391,7 @@ Video/Audio capability of `BlueJeansSDK`  would only work in an iOS Device since
 - Content receive resolution and BW max: 1920x1080 at 5 fps, 300 kbps
 - Video send resolution and BW max: 640x480 at 30fps, 900 kbps
 
-Note: Endpoints that send video in an aspect ratio of 4:3 instead of 16:9, will result in video receive a resolution of 640x480 in place of 640x360, 240x180 in place of 320x180, and 120x90 in place of 160x90. Mobile endpoints / BlueJeans iOS SDK endpoints send video at 640x480 i.e at an aspect ratio of 4:3.
+Note: Endpoints that send video in an aspect ratio of 4:3 instead of 16:9, will result in the video received at a resolution of 640x480 in place of 640x360, 240x180 in place of 320x180, and 120x90 in place of 160x90. Mobile endpoints / BlueJeans iOS SDK endpoints send video at 640x480 i.e at an aspect ratio of 4:3.
 
 ## Tracking & Analytics
 
@@ -369,9 +404,10 @@ The BlueJeans iOS Client SDK is closed source and proprietary. As a result, we c
 ## License
 
 Copyright © 2021 BlueJeans Network. All usage of the SDK is subject to the Developer Agreement that can be found [here](LICENSE).
-Download the agreement and send an email to api-sdk@bluejeans.com with a signed version of this agreement. Before any commerical or public facing usage of this SDK.
+Download the agreement and send an email to api-sdk@bluejeans.com with a signed version of this agreement. Before any commercial or public facing usage of this SDK.
 
 ## Legal Requirements
 
 Use of this SDK is subject to our [Terms & Conditions](https://www.bluejeans.com/terms-and-conditions-may-2020) and [Privacy Policy](https://www.bluejeans.com/privacy-policy).
+
 

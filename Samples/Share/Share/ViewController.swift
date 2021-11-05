@@ -11,7 +11,7 @@ import BJNClientSDK
 
 class ViewController: UIViewController {
 
-    var meetingService: MeetingService!
+    var meetingService: MeetingServiceProtocol!
     var contentShareService: ContentShareServiceProtocol!
     
     var pickerView: UIView?
