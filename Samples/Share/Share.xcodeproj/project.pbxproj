@@ -51,8 +51,6 @@
 		A1E9FAA82728E7EA006CF8C2 /* videoeffects.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1FB32D026F433E4000A11EB /* videoeffects.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E9FAAE2728E7EA006CF8C2 /* VZXRCVFeatureVirtualBackgrounds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAA2728E7EA006CF8C2 /* VZXRCVFeatureVirtualBackgrounds.xcframework */; };
 		A1E9FAAF2728E7EB006CF8C2 /* VZXRCVFeatureVirtualBackgrounds.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAA2728E7EA006CF8C2 /* VZXRCVFeatureVirtualBackgrounds.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A1E9FAB02728E7EB006CF8C2 /* ZipArchive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAB2728E7EA006CF8C2 /* ZipArchive.xcframework */; };
-		A1E9FAB12728E7EB006CF8C2 /* ZipArchive.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAB2728E7EA006CF8C2 /* ZipArchive.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E9FAB22728E7EB006CF8C2 /* VZXRCVVideoEffects.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAC2728E7EA006CF8C2 /* VZXRCVVideoEffects.xcframework */; };
 		A1E9FAB32728E7EC006CF8C2 /* VZXRCVVideoEffects.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAC2728E7EA006CF8C2 /* VZXRCVVideoEffects.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E9FAB42728E7EC006CF8C2 /* VZXRCVCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E9FAAD2728E7EA006CF8C2 /* VZXRCVCommon.xcframework */; };
@@ -115,7 +113,6 @@
 				A1E9FAA02728E7E8006CF8C2 /* PubNub.xcframework in Embed Frameworks */,
 				A1E9FA982728E7E7006CF8C2 /* fiberClient.xcframework in Embed Frameworks */,
 				A1E9FAA42728E7E9006CF8C2 /* SocketRocket.xcframework in Embed Frameworks */,
-				A1E9FAB12728E7EB006CF8C2 /* ZipArchive.xcframework in Embed Frameworks */,
 				A1E9FA822728E7E5006CF8C2 /* BJNClientBaseCore.xcframework in Embed Frameworks */,
 				A1E9FAB32728E7EC006CF8C2 /* VZXRCVVideoEffects.xcframework in Embed Frameworks */,
 			);
@@ -151,7 +148,6 @@
 
 /* Begin PBXFileReference section */
 		A1E9FAAA2728E7EA006CF8C2 /* VZXRCVFeatureVirtualBackgrounds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VZXRCVFeatureVirtualBackgrounds.xcframework; path = ../Frameworks/VZXRCVFeatureVirtualBackgrounds.xcframework; sourceTree = "<group>"; };
-		A1E9FAAB2728E7EA006CF8C2 /* ZipArchive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZipArchive.xcframework; path = ../Frameworks/ZipArchive.xcframework; sourceTree = "<group>"; };
 		A1E9FAAC2728E7EA006CF8C2 /* VZXRCVVideoEffects.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VZXRCVVideoEffects.xcframework; path = ../Frameworks/VZXRCVVideoEffects.xcframework; sourceTree = "<group>"; };
 		A1E9FAAD2728E7EA006CF8C2 /* VZXRCVCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VZXRCVCommon.xcframework; path = ../Frameworks/VZXRCVCommon.xcframework; sourceTree = "<group>"; };
 		A1FB32C726F433E4000A11EB /* BJNClientCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BJNClientCore.xcframework; path = ../Frameworks/BJNClientCore.xcframework; sourceTree = "<group>"; };
@@ -218,7 +214,6 @@
 				A1E9FA9F2728E7E8006CF8C2 /* PubNub.xcframework in Frameworks */,
 				A1E9FA972728E7E7006CF8C2 /* fiberClient.xcframework in Frameworks */,
 				A1E9FAA32728E7E9006CF8C2 /* SocketRocket.xcframework in Frameworks */,
-				A1E9FAB02728E7EB006CF8C2 /* ZipArchive.xcframework in Frameworks */,
 				A1E9FA812728E7E5006CF8C2 /* BJNClientBaseCore.xcframework in Frameworks */,
 				A1E9FAB22728E7EB006CF8C2 /* VZXRCVVideoEffects.xcframework in Frameworks */,
 			);
@@ -279,7 +274,6 @@
 				A1E9FAAD2728E7EA006CF8C2 /* VZXRCVCommon.xcframework */,
 				A1E9FAAA2728E7EA006CF8C2 /* VZXRCVFeatureVirtualBackgrounds.xcframework */,
 				A1E9FAAC2728E7EA006CF8C2 /* VZXRCVVideoEffects.xcframework */,
-				A1E9FAAB2728E7EA006CF8C2 /* ZipArchive.xcframework */,
 				A1FB330A26F436D9000A11EB /* BJNiOSBroadcastExtension.xcframework */,
 				A1FB32DB26F433E5000A11EB /* BJNAPIClient.xcframework */,
 				A1FB32D326F433E4000A11EB /* BJNClientBaseCore.xcframework */,

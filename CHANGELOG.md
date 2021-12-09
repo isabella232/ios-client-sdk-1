@@ -1,6 +1,29 @@
 Change Log
 ==========
 
+## Version 1.2.0
+---------------------------------
+
+### ***Breaking Changes***
+
+#### **Renamed**
+- meetingService.participants -> meetingService.participantsService.participants
+- BJNParticipant.isAudioMuted -> BJNParticipant.audioMuteState.muted
+- BJNParticipant.isVideoMuted -> BJNParticipant.videoMuteState.muted
+
+#### **Behaviour Changed**
+- In meetingService.joinMeeting(...), the onCompletion closure will be called with JoinResult of `.success` when meetingState moves from `.validating` -> `.waitingRoom`
+  when waiting room is enabled in the meeting. In 1.1.0, this was called when meetingState moved from `.waitingRoom` -> `connecting`. 
+  
+#### Added
+- meetingService.participantsService
+- participantsService.activeSpeaker, the current active speaker, or talking participant in the meeting
+- MuteState, a struct which holds information about the overall mute state, and the local and remote (moderator) mute states
+- meetingService.audioMuteState: BJNObservable<MuteState>
+- meetingService.videoMuteState: BJNObservable<MuteState>
+- meetingService.setRemoteAudioMuted(...), stops the audio stream of the meeting
+
+
 ## Version 1.1.0
 ---------------------------------
 
@@ -52,9 +75,9 @@ Change Log
     - isPrivateChatAvailable flag added - private chat can be disabled in some meetings.
 
 
-Version 1.0.0 
+## Version 1.0.0 
 ---------------------------------
-Features:
+### Features:
 
 - Audio and Video Permission handling
 - Join, End Meeting
