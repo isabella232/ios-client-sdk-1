@@ -26,17 +26,19 @@ The design of the SDK emphasizes **simplicity**. Developers can quickly integrat
 - Multi-stream support ("Sequin" Video Layouts)
 - Public and Private meeting Chat
 - Remote Video and Content mute
-- Meeting Information (Title, Hostname, Meeting ID)
-
-### New Features (new in 1.1.0) See CHANGELOG.md for more details.
+- Meeting Information (Title, Hostname, Meeting ID, Participant passcode)
 - Closed Captioning Support
 - Waiting Room Participant Support
 - Waiting Room Moderation Support
 - Moderator Controls
-- Mute remote content and video streams
-- Xcode 13.0 Support
+- Mute remote content video and (new: audio) streams
 
-## Current Version: 1.1.0
+New in 1.2.0
+- Seperate local and remote mute state information
+- Active speaker (Who's talking)
+- Mute remote audio
+
+## Current Version: 1.2.0
 
 ## Pre-requisites
 
@@ -74,7 +76,7 @@ Integrate the SDK using the below guidelines and use SDK APIs to join a meeting 
 
 Steps:
 
-1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.1.0/ios-client-sdk-xcode12.zip` or `https://swdl.bluejeans.com/bjnvideosdk/ios/1.1.0/ios-client-sdk-xcode13.zip` depending on whether you are using Xcode 12.5 or 13.0.
+1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.2.0/ios-client-sdk-xcode12.zip` or `https://swdl.bluejeans.com/bjnvideosdk/ios/1.2.0/ios-client-sdk-xcode13.zip` depending on whether you are using Xcode 12.5 or 13.0.
 2. Unzip the file and copy the `Frameworks` folder to the root folder where the Xcode project(*xxxx.xcodeproj* file) is located.
 3. Open the Xcode project, click on the project settings and select the *App target -> General Tab*.
 4. Scroll to ***Embedded Binaries*** section of Xcode target.
@@ -302,6 +304,10 @@ Provides a method to get a UIView for selecting an audio device. Currently, this
 
 The VideoDeviceService provides views for the self-view, remote endpoints, and any content that is being received currently. It also exposes methods/properties related to these, for example selecting a camera or the current size of received self or content share video.
 
+## ParticipantsService
+
+The ParticipantsService provides information about the participants in the meeting.
+
 ## ContentShareService
 
 Screen sharing on iOS involves creating an app extension that can capture the entire screen - even when your app is in the background. This is covered in detail in [here](./ContentShareGuide.md).
@@ -387,6 +393,7 @@ Video/Audio capability of `BlueJeansSDK` would only work in an iOS Device since 
 |              |                 |                                    | 320x180/240x180 (participants > 2, < 4) 30 fps            | 1200 kbps            |
 |              |                 |                                    | 160x90/120x90  (participants > 4)       15 fps            | 900 kbps             |
 |              |                 |                                    | 160x90/120x90  (participants > 9)       15 fps            | 1700 kbps            |
+| -------------|:---------------:| :---------------------------------:| :--------------------------------------------------------:|:--------------------:|
 
 - Content receive resolution and BW max: 1920x1080 at 5 fps, 300 kbps
 - Video send resolution and BW max: 640x480 at 30fps, 900 kbps
