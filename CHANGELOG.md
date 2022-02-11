@@ -1,5 +1,15 @@
 Change Log
 ==========
+## Version 1.3.0
+
+### Added
+- Swift Package Manager Support
+- Module Stability
+- "Recording has started, has stopped, is on" audio notifications play by default when the meeting is being recorded
+- privateChatService.participantsWithChats, the list of participants who have sent or received chat to/from the client during the meeting 
+
+### Fixed
+- Issue with private chat where offline participants unreadMessagesCount could not be cleared fixed.
 
 ## Version 1.2.0
 ---------------------------------

@@ -12,9 +12,10 @@ The design of the SDK emphasizes **simplicity**. Developers can quickly integrat
 - Audio and Video Permission handling
 - Join, End Meeting
 - Self Video
-- Remote Video, Remote Video states
+- Remote Video
 - Content receive
 - Audio and Video self mute
+- Separate local and moderator mute state information
 - Orientation handling
 - Toggle front / back camera
 - Video Layout switch
@@ -31,22 +32,23 @@ The design of the SDK emphasizes **simplicity**. Developers can quickly integrat
 - Waiting Room Participant Support
 - Waiting Room Moderation Support
 - Moderator Controls
-- Mute remote content video and (new: audio) streams
-
-New in 1.2.0
-- Seperate local and remote mute state information
+- Media Stream Enablement, mute content video and audio streams.
 - Active speaker (Who's talking)
-- Mute remote audio
 
-## Current Version: 1.2.0
+New in 1.3.0
+- Swift Package Manager Support
+- Module Stability (support for all Xcode Versions >= 12.5)
+- "Recording has started, stopped, is on" audio notifications will play by default when the meeting is being recorded.
+
+## Current Version: 1.3.0
 
 ## Pre-requisites
 
-This framework requires ***Swift 5.4 or Swift 5.5*** and ***Xcode 12.5 or 13.0***. Module stability will be provided in a future release.
+This framework requires ***Swift 5.4 or later** and ***Xcode 12.5 or above***.
 
 Target deployment requires a minimum of *iOS version 13.0*.
 
-All dependent frameworks are included as part of the *Frameworks* folder. Use the appropriate frameworks depending on your Xcode version. 
+All dependent frameworks are included as part of the *Frameworks* folder. 
 
 ## API Architecture
 
@@ -74,9 +76,14 @@ Integrate the SDK using the below guidelines and use SDK APIs to join a meeting 
 
 ## Integration Steps
 
+### Swift Package Manager
+1. Add the URL `https://github.com/bluejeans/ios-client-sdk` using Swift Package Manager in Xcode, the SDK supports Swift Package Manager from version `1.3.0`
+2. Include either `bluejeans-ios-client-sdk` or `bluejeans-ios-client-sdk-simulator` in your target depending on whether you want to support physical devices or the simulator. We currently can not support both in one target using SPM, please follow the instructions for manual integration below if you require support for both in one target. 
+
+### Manual
 Steps:
 
-1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.2.0/ios-client-sdk-xcode12.zip` or `https://swdl.bluejeans.com/bjnvideosdk/ios/1.2.0/ios-client-sdk-xcode13.zip` depending on whether you are using Xcode 12.5 or 13.0.
+1. Download the xcframeworks from here: `https://swdl.bluejeans.com/bjnvideosdk/ios/1.3.0/Frameworks.zip`
 2. Unzip the file and copy the `Frameworks` folder to the root folder where the Xcode project(*xxxx.xcodeproj* file) is located.
 3. Open the Xcode project, click on the project settings and select the *App target -> General Tab*.
 4. Scroll to ***Embedded Binaries*** section of Xcode target.
@@ -87,7 +94,7 @@ Steps:
 
 ### Steps For Simulator Support
 
-If you follow the integration steps above you will notice that you can not run your app on the iOS Simulator. The SDK does support using the simulator for debugging but there are some extra steps to get it working.
+If you follow the manual integration steps above you will notice that you can not run your app on the iOS Simulator. The SDK does support using the simulator for debugging but there are some extra steps to get it working.
 
 The following frameworks are not built with support for the simulator.
 
@@ -103,9 +110,9 @@ The following frameworks are not built with support for the simulator.
 
 ![Xcode Project Build Setting - General Tab](Images/embed-device-only.png)
 
-### SPM, Carthage and Cocoapods
+### Carthage and Cocoapods
 
-Other dependency managers, such as the Swift package manager, Carthage, or Cocoapods are not currently supported.
+Other dependency managers such as Carthage, or Cocoapods are not currently supported.
 
 ### Upgrade Instructions
 
@@ -144,7 +151,7 @@ iOS displays this prompt when asking the user for permission, and thereafter in 
 
 The work needed to add the BlueJeans functionality into your application code is outlined here. Briefly, you will do these steps:
 
-- Include the BlueJeans `BJNClientSDK` module, and initialize the SDK by calling the `BlueJeansSDK.initalize` method.
+- Include the BlueJeans `BJNClientSDK` module, and optionally initialize the SDK by calling the `BlueJeansSDK.initalize` method.
 - Create a video view for the *Self-view*, add and position the remote video view controller, and if desired *Content Share view*.
 - Make the API call to Join the BlueJeans Meeting.
 - When finished, make the API call to Leave the BlueJeans Meeting.
@@ -411,10 +418,21 @@ The BlueJeans iOS Client SDK is closed source and proprietary. As a result, we c
 ## License
 
 Copyright © 2021 BlueJeans Network. All usage of the SDK is subject to the Developer Agreement that can be found [here](LICENSE).
-Download the agreement and send an email to api-sdk@bluejeans.com with a signed version of this agreement. Before any commercial or public facing usage of this SDK.
+Download the agreement and send an email to api-sdk@bluejeans.com with a signed version of this agreement. Before any commercial or public-facing usage of this SDK.
 
 ## Legal Requirements
 
 Use of this SDK is subject to our [Terms & Conditions](https://www.bluejeans.com/terms-and-conditions-may-2020) and [Privacy Policy](https://www.bluejeans.com/privacy-policy).
+
+## F.A.Q
+
+- Q. I set the video layout / mute state before joining a meeting but it changed after I joined the meeting without me calling any APIs?
+- A. Certain properties, such as the video layout should only be set after connecting to the meeting. While it is possible to set these while the meeting state is `.connecting` after the state becomes `.connected` the meeting owner's preferred layout will be pushed to all clients, overriding the changed selection. Similarly setting the `audioMuted` or `videoMuted` properties may be overridden by the "mute on entry" setting in some meetings.  
+
+- Q. The self/content share view is squashed/stretched?
+- A. Because the aspect ratio of the self view may change depending on the orientation or capture resolution, and the aspect ratio of the content share may change depending on the sharing device. You must observe the selfViewSize and contentShareSize properties and create constraints for the views appropriately. Example code to do this can be found in the HelloBlueJeans sample app. 
+
+- Q. Can I use Bitcode? 
+- A. No, the BlueJeans iOS Client SDK does not support Bitcode. 
 
 

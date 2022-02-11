@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>InMeetingPropertyManagerEvents Class Reference</title>
+    <title>MuteState Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/InMeetingPropertyManagerEvents" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/MuteState" class="dashAnchor"></a>
 
-    <a title="InMeetingPropertyManagerEvents Class Reference"></a>
+    <a title="MuteState Structure Reference"></a>
 
     <header class="header">
       <div>
@@ -41,7 +41,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">iOS Video SDK</a>
       <img class="carat" src="../img/carat.png" />
-      <span id="currentPage">InMeetingPropertyManagerEvents Class Reference</span>
+      <span id="currentPage">MuteState Structure Reference</span>
       <script>
         if (window.location.pathname.endsWith("index.html")) {
           document.getElementById("currentPage").innerHTML = "About the SDK"
@@ -69,6 +69,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/BlueJeansSDK.html">BlueJeansSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BlueJeansSDKInitParams.html">BlueJeansSDKInitParams</a>
               </li>
             </ul>
           </li>
@@ -98,6 +101,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/MeetingInformation.html">MeetingInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/WaitingRoomEvent.html">WaitingRoomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MuteState.html">MuteState</a>
               </li>
             </ul>
           </li>
@@ -167,9 +176,6 @@
                 <a class="nav-group-task-link" href="../Structs/BJNPrivateChatMessage.html">BJNPrivateChatMessage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/BJNParticipant.html">BJNParticipant</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Chat.html#/s:12BJNClientSDK13ParticipantIDa">ParticipantID</a>
               </li>
             </ul>
@@ -212,6 +218,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ParticipantsService.html">ParticipantsService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ParticipantsServiceProtocol.html">ParticipantsServiceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BJNParticipant.html">BJNParticipant</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../ModeratorControlsService.html">ModeratorControlsService</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -219,6 +236,20 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/RecordingState.html">RecordingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RecordingSuccess.html">RecordingSuccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RecordingError.html">RecordingError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ClosedCaptioningService.html">ClosedCaptioningService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ClosedCaptioningServiceProtocol.html">ClosedCaptioningServiceProtocol</a>
               </li>
             </ul>
           </li>
@@ -239,50 +270,20 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/InMeetingPropertyManagerEvents.html">InMeetingPropertyManagerEvents</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Enums.html">Other Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/RecordingError.html">RecordingError</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/RecordingSuccess.html">RecordingSuccess</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/WaitingRoomEvent.html">WaitingRoomEvent</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other%20Protocols.html">Other Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/ClosedCaptioningServiceProtocol.html">ClosedCaptioningServiceProtocol</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
 
         <section class="section">
           <div class="section-content">
-            <h1>InMeetingPropertyManagerEvents</h1>
+            <h1>MuteState</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">InMeetingPropertyManagerEvents</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MuteState</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Holds information about the mute status, and the reason for the mute.</p>
 
           </div>
         </section>
@@ -294,9 +295,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12BJNClientSDK30InMeetingPropertyManagerEventsCACycfc"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12BJNClientSDK30InMeetingPropertyManagerEventsCACycfc">init()</a>
+                    <a name="/s:12BJNClientSDK9MuteStateV5mutedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/muted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK9MuteStateV5mutedSbvp">muted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -311,7 +312,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">muted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -321,9 +322,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12BJNClientSDK30InMeetingPropertyManagerEventsC20demotedToWaitingRoom0A8BaseCore17EventWithMetadataCySSSgGvp"></a>
-                    <a name="//apple_ref/swift/Property/demotedToWaitingRoom" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12BJNClientSDK30InMeetingPropertyManagerEventsC20demotedToWaitingRoom0A8BaseCore17EventWithMetadataCySSSgGvp">demotedToWaitingRoom</a>
+                    <a name="/s:12BJNClientSDK9MuteStateV10localMutedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/localMuted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK9MuteStateV10localMutedSbvp">localMuted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -338,7 +339,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">demotedToWaitingRoom</span><span class="p">:</span> <span class="kt">EventWithMetadata</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">localMuted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK9MuteStateV11remoteMutedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/remoteMuted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK9MuteStateV11remoteMutedSbvp">remoteMuted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">remoteMuted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BJNClientSDK9MuteStateV10localMuted06remoteF0ACSb_Sbtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(localMuted:remoteMuted:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BJNClientSDK9MuteStateV10localMuted06remoteF0ACSb_Sbtcfc">init(localMuted:remoteMuted:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">localMuted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">remoteMuted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
